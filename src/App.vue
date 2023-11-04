@@ -1,5 +1,6 @@
 <template>
   <AppHeader/>
+  <router-view />
 </template>
 
 <script>
@@ -11,6 +12,8 @@ export default {
     AppHeader
   }
 }
+
+
 </script>
 
 <style>
