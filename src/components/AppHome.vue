@@ -1,5 +1,6 @@
 <template>
-  <div class="flex all p-8 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
+ <div :class="{'dark-mode': isDarkMode}"  class="contentt">
+  <div  :class="{'dark-mode': isDarkMode}" class="flex all p-8 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
     <div class="flex-1  p-6 ">
       <div class="text-6xl mb-4">Hi, I'm Soufiane Boushaba</div>
       <div class="text-4xl mb-6">{{ dynamicText }}</div>
@@ -50,11 +51,14 @@
     </div>
    </div>
   </div>
-  
+</div>
 </template>
 
 <script>
 export default {
+     props: {
+    isDarkMode: Boolean,
+  },
   name: 'AppHome',
   data() {
     return {
@@ -85,6 +89,15 @@ export default {
 </script>
 
 <style scoped>
+ div{
+    transition:.7s;
+  }
+.dark-mode {
+    background-color: #F7F7F7;
+    color: black;
+  }
+
+
 .download-icon {
   animation: moveUpDown .7s infinite alternate;
 }

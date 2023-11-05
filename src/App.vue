@@ -1,19 +1,26 @@
 <template>
-  <AppHeader/>
-  <router-view />
+  <AppHeader :isDarkMode="isDarkMode" @toggleDarkMode="toggleDarkMode"/>
+  <router-view :isDarkMode="isDarkMode" />
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
 
 export default {
-  name: 'App',
+  data() {
+    return {
+      isDarkMode: false,
+    };
+  },
+  methods: {
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode; // Toggle the dark mode state
+    },
+  },
   components: {
-    AppHeader
-  }
-}
-
-
+    AppHeader,
+  },
+};
 </script>
 
 <style>
