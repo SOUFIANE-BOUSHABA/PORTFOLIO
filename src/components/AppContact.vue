@@ -21,7 +21,7 @@
      
 
       <!-- Form Section -->
-      <form class="text-black">
+      <form class="text-black" @submit.prevent="submitForm">
         <div class="mb-4 ">
           <label for="name" class="block text-sm font-medium text-gray-700"></label>
           <input type="text" id="name" placeholder="Enter your name" name="name" :class="{' bg-slate-200': isDarkMode}" class="w-full p-2  border-0 bg-slate-400 text-black rounded-md focus:outline-none focus:ring focus:border-blue-300" />
@@ -44,12 +44,108 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2';
 export default {
   name: "AppContact",
    props: {
     isDarkMode: Boolean,
   },
+
+   methods: {
+    submitForm() {
+      // Get the form input values
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const comment = document.getElementById("comment").value;
+
+      // Define regular expressions for validation
+      const nameRegex = /^[A-Za-z\s]+$/;
+      const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+      const commentRegex = /^[A-Za-z\s]+$/;
+      // Perform validation
+      if (!nameRegex.test(name)) {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+            })
+
+            Toast.fire({
+            icon: 'error',
+            title: 'Please enter a valid name containing only letters and spaces.'
+            });
+        
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+         const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+            })
+
+            Toast.fire({
+            icon: 'error',
+            title: 'Please enter a valid email adresse'
+            });
+        return;
+      }
+
+      if (!commentRegex.test(comment)) {
+         const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+            })
+
+            Toast.fire({
+            icon: 'error',
+            title: 'Please enter a valid comment'
+            });
+        return;
+      }
+      else{
+           const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+            })
+
+            Toast.fire({
+            icon: 'success',
+            title: 'your comment send successfuly.'
+            })
+        return;
+      }
+    },
+  },
 };
+
 </script>
 
 <style scoped>
