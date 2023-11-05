@@ -29,18 +29,22 @@
   </header>
 </template>
 
+
 <script>
+
 export default {
+  props: {
+    isDarkMode: Boolean,
+  },
   name: 'AppHeader',
   data() {
     return {
-      isDarkMode: false,
       showMenu: false,
     };
   },
   methods: {
     toggleDarkMode() {
-      this.isDarkMode = !this.isDarkMode;
+      this.$emit('toggleDarkMode'); 
     },
     toggleMenu() {
       this.showMenu = !this.showMenu;
@@ -52,6 +56,9 @@ export default {
 <style scoped>
   header{
     transition:.7s;
+    z-index:100;
+    position:sticky;
+    top:0;
   }
   .dark-mode {
     background-color: white;
