@@ -1,5 +1,5 @@
 <template>
-  <div  :class="{'dark-mode': isDarkMode}" class=" all md:flex   py-40 p-20 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
+  <div  :class="{'dark-mode': isDarkMode}" class=" all md:flex font-custom  py-40 p-20 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
     <!-- Left Section -->
     <div class=" flex-1 p-6">
       <h1 class="text-6xl font-bold mb-4">Let's Talk About Your Project.</h1>
@@ -7,7 +7,7 @@
        <!-- Email Section -->
       <div class="flex flex-1 items-center mt-20 mb-4">
         <div class="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center">
-         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+         <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
         </div>
         <div class="ml-2 ">
           <p class="text-xl font-semibold">Mail me at:</p>
@@ -53,16 +53,16 @@ export default {
 
    methods: {
     submitForm() {
-      // Get the form input values
+    // 
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const comment = document.getElementById("comment").value;
 
-      // Define regular expressions for validation
+    //
       const nameRegex = /^[A-Za-z\s]+$/;
       const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
       const commentRegex = /^[A-Za-z\s]+$/;
-      // Perform validation
+    //  
       if (!nameRegex.test(name)) {
           const Toast = Swal.mixin({
             toast: true,
