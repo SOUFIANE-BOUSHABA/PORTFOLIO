@@ -14,8 +14,15 @@ export default {
   },
   methods: {
     toggleDarkMode() {
-      this.isDarkMode = !this.isDarkMode; // Toggle the dark mode state
+      this.isDarkMode = !this.isDarkMode; 
+      localStorage.setItem('darkMode', this.isDarkMode.toString());
     },
+  },
+  created() {
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode) {
+      this.isDarkMode = darkMode === 'true';
+    }
   },
   components: {
     AppHeader,
