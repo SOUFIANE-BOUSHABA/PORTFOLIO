@@ -4,15 +4,24 @@
     <div class="flex-1  p-6 ">
       <div class="text-6xl mb-4">Hi, I'm Soufiane Boushaba</div>
       <div class="text-4xl mb-6">{{ dynamicText }}</div>
-      <a href="#about-me" class=" flex gap-4 items-center text-blue-400 mt-4">See more about me  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right see-more-icon" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg></a>
+      <a href="/about" class=" flex gap-4 items-center text-blue-400 mt-4">See more about me  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right see-more-icon" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg></a>
       <div class="mt-16 flex gap-4  sm:grid md:flex btns ">
         <button  :class="{'dark-mode': isDarkMode}" class="flex gap-4 items-center justify-center h-16 border-slate-400 border-solid border-2 text-white py-2 px-4 mr-2">Download CV  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download download-icon" viewBox="0 0 16 16"> <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/> <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/> </svg></button>
         <a  href="/contact"  class="bg-teal-900 text-white h-16 py-2 px-4 flex  items-center">Let's talk</a>
         <div class=" ml-6 w-2/4 h-96 rounded "> 
-            <div class=" h-30 flex mt-2 items-center">
-                <div class="w-4 h-4 bg-green-500 rounded-full mx-2"></div>
-                <div class="w-4 h-4 bg-red-500 rounded-full mx-2"></div>
-                <div class="w-4 h-4 bg-yellow-500 rounded-full mx-2"></div>
+            <div class=" h-30 flex gap-4 mt-2 items-center">
+                        <span class="relative flex w-4 h-4 ">
+                            <span class="animate-ping absolute w-4 h-4 inline-flex h-full w-full rounded-full  bg-green-500 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full w-4 h-4 bg-green-500"></span>
+                       </span>
+                        <span class="relative flex w-4 h-4">
+                            <span class="animate-ping absolute w-4 h-4 inline-flex h-full w-full rounded-full   bg-red-500 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full w-4 h-4  bg-red-500"></span>
+                       </span>
+                        <span class="relative flex w-4 h-4">
+                            <span class="animate-ping absolute w-4 h-4 inline-flex h-full w-full rounded-full  bg-yellow-500 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full w-4 h-4 bg-yellow-500"></span>
+                       </span>
             </div>
                                 <div class="w-64 mt-6 border-solid border-2 py-6 ">
                                         <pre>  function repeat() {</pre>
