@@ -1,6 +1,6 @@
 <template>
  <div :class="{'dark-mode': isDarkMode}"  class="contentt">
-  <div   :class="{'dark-mode': isDarkMode}" class="flex all p-8 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
+  <div   :class="{'dark-mode': isDarkMode}" class="flex  font-custom all p-8 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
     <div class="flex-1  p-6 ">
       <div class="text-6xl mb-4">Hi, I'm Soufiane Boushaba</div>
       <div class="text-4xl mb-6">{{ dynamicText }}</div>
