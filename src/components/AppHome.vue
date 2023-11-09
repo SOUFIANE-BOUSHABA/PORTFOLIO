@@ -1,13 +1,13 @@
 <template>
  <div :class="{'dark-mode': isDarkMode}"  class="contentt">
-  <div   :class="{'dark-mode': isDarkMode}" class="flex  font-custom all p-8 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
+  <div   :class="{'dark-mode': isDarkMode}" class="flex justify-center font-custom all p-8 bg-slate-900 drop-shadow-md leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-auto">
     <div class="flex-1  p-6 ">
       <div class="text-6xl mb-4">Hi, I'm Soufiane Boushaba</div>
       <div class="text-4xl mb-6 h-20" ref="typedText">  </div>
       <a href="/about" class=" flex gap-4 items-center text-blue-400 mt-4">See more about me  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right see-more-icon" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg></a>
       <div class="mt-16 flex gap-4  sm:grid md:flex btns ">
         <button  :class="{'dark-mode': isDarkMode}" class="flex gap-4 items-center justify-center h-16 border-slate-400 border-solid border-2 text-white py-2 px-4 mr-2">Download CV  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download download-icon" viewBox="0 0 16 16"> <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/> <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/> </svg></button>
-        <a  href="/contact"  class="bg-teal-900 text-white h-16 py-2 px-4 flex  items-center">Let's talk</a>
+        <a  href="/contact"  class="bg-teal-900 text-white h-16 py-2 px-4 flex justify-center items-center">Let's talk</a>
         <div class=" ml-6 w-2/4 h-96 rounded "> 
             <div class=" h-30 flex gap-4 mt-2 items-center">
                         <span class="relative flex w-4 h-4 ">
@@ -39,13 +39,13 @@
     </div>
 <div class="cursor-circle" :class="{'dark-mode-circle': isDarkMode}" :style="{ transform: `translate(${cursorX}, ${cursorY})` }"></div>
 
-    <div class =" flex justify-between  w-2/5">
-    <div class="w-76 p-4">
-      <img src="@/assets/f298fd17-4a38-40d5-9476-48b9cd58a448-removebg-preview.png" alt="Your Picture" class="rounded-full w-3/4 h-76 mr-96 mx-auto" />
+    <div class =" flex bottomm  justify-between  w-2/5">
+    <div class="w-76 flex justify-start p-4">
+      <img src="@/assets/f298fd17-4a38-40d5-9476-48b9cd58a448-removebg-preview.png" alt="Your Picture" class="rounded-full w-72 h-72  " />
     </div>
 
     <div class="w-1/8 p-4 mt-28">
-      <div class="grid gap-4">
+      <div class="grid social gap-4">
         <a href="https://github.com/SOUFIANE-BOUSHABA" target="_blank" class=" text-center">
          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github github-icon" viewBox="0 0 16 16"> <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> </svg>
         </a>
@@ -216,8 +216,18 @@ export default {
  .all{
      display:grid;
  }
+  .bottomm{
+     width:90%;
+   }
 }
-
+@media(max-width:770px){
+ .btns{
+     width:100%;
+ }
+ .btns button{
+   width:100%;
+ }
+}
 @media(max-width:700px){
  .btns{
      display:grid;
@@ -244,5 +254,18 @@ export default {
     .cursor-circle{
       display:none;
     }
+   
+  }
+
+  @media(max-width:550px){
+   .bottomm{
+     display:flex;
+     flex-direction:column;
+     align-items:center;
+     width:100%;
+   }
+   .social{
+     display:flex;
+   }
   }
 </style>
