@@ -223,9 +223,6 @@ export default {
      display:grid;
  }
 }
-
-
-
   @media(max-width:550px){
    .bottomm{
      display:flex;
