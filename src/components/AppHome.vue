@@ -37,7 +37,6 @@
         </div>
       </div>
     </div>
-<div class="cursor-circle" :class="{'dark-mode-circle': isDarkMode}" :style="{ transform: `translate(${cursorX}, ${cursorY})` }"></div>
 
     <div class =" flex bottomm  justify-between  w-2/5">
     <div class="w-76 flex justify-start p-4">
@@ -73,14 +72,11 @@ export default {
   },
   name: 'AppHome',
   data() {
-    return {
-       cursorX: 0,
-       cursorY: 0,
-    };
+   
   },
   mounted() {
     this.initTyped();
-    this.attachCursorListener();
+   
   },
   methods: {
      initTyped() {
@@ -96,13 +92,7 @@ export default {
       new Typed(this.$refs.typedText, options);
     },
 
-     attachCursorListener() {
-      document.addEventListener("mousemove", this.updateCursorPosition);
-    },
-    updateCursorPosition(event) {
-      this.cursorX = event.clientX + "px";
-      this.cursorY = event.clientY + "px";
-    },
+    
   },
 
     created() {
@@ -235,27 +225,6 @@ export default {
 }
 
 
-.cursor-circle {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border:1px solid white;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out;
-    z-index: 9999; 
-  }
-  .dark-mode-circle{
-      border:1px solid black; 
-  }
-
-  @media(max-width:1000px){
-    .cursor-circle{
-      display:none;
-    }
-   
-  }
 
   @media(max-width:550px){
    .bottomm{
