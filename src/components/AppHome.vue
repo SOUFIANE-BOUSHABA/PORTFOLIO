@@ -34,14 +34,14 @@
                                         <pre>  repeat();</pre>
                                 </div>
         
-        </div>
+            </div>
       </div>
     </div>
 
     <div class =" flex bottomm  justify-between  w-2/5">
-    <div class="w-76 flex justify-start p-4">
-      <img src="@/assets/f298fd17-4a38-40d5-9476-48b9cd58a448-removebg-preview.png" alt="Your Picture" class="rounded-full w-72 h-72  " />
-    </div>
+        <div class="w-76 flex justify-start p-4">
+          <img src="@/assets/f298fd17-4a38-40d5-9476-48b9cd58a448-removebg-preview.png" alt="Your Picture" class="rounded-full w-72 h-72  " />
+        </div>
 
     <div class="w-1/8 p-4 mt-28">
       <div class="grid social gap-4">
@@ -91,10 +91,7 @@ export default {
 
       new Typed(this.$refs.typedText, options);
     },
-    
-    
   },
-
     created() {
          window.addEventListener('load', () => {
              const Toast = Swal.mixin({
