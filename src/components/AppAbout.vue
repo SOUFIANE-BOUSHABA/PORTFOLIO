@@ -92,7 +92,7 @@
    <h2 class="text-2xl font-semibold mb-4">Services</h2>
    <div class="flex gap-16 justify-center flex-wrap">
            <div class="w-full md:w-1/4 border-2 py-20 px-4 group relative cursor-pointer">
-                <div :class="{' group-hover:text-slate-950': isDarkMode}" class="text-center grid gap-8 place-items-center z-10  group-hover:text-white">
+                <div :class="{' group-hover:text-black': isDarkMode}" class="text-center grid gap-8 place-items-center z-10  group-hover:text-white">
                     <a class="bg-slate-200 p-3 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"  class="bi bi-code-slash text-black" viewBox="0 0 16 16">
                         <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
@@ -105,7 +105,7 @@
             </div>
 
             <div class="w-full md:w-1/4 border-2 py-20 px-4 group relative cursor-pointer ">
-              <div :class="{' group-hover:text-slate-950': isDarkMode}" class="text-center grid gap-8 place-items-center z-10  group-hover:text-white">
+              <div :class="{' group-hover:text-black': isDarkMode}" class="text-center grid gap-8 place-items-center z-10  group-hover:text-white">
                 <a class="bg-slate-200 p-3 rounded-full">  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-file-code text-black" viewBox="0 0 16 16"> <path d="M6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0a.5.5 0 1 0-.708.708L10.293 8 8.646 9.646a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z"/> <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/> </svg></a>
                 <h3 class="text-xl font-semibold">Mobile Development</h3>
                 <p class="text-justify">Mobile development focuses on creating applications for mobile devices, such as smartphones and tablets.</p>
@@ -113,7 +113,7 @@
                 <div :class="{' bg-slate-950': isDarkMode}" class="bg-slate-400 h-4 w-full absolute rounded-t-full bottom-0 left-0 group-hover:h-full  transition-height duration-300  opacity-50 group-hover:rounded-none duration-500"></div>
             </div>
             <div class="w-full md:w-1/4 border-2 py-20 px-4 group relative cursor-pointer ">
-                <div :class="{' group-hover:text-slate-950': isDarkMode}" class="text-center grid gap-8 place-items-center z-10  group-hover:text-white">
+                <div :class="{' group-hover:text-black': isDarkMode}" class="text-center grid gap-8 place-items-center z-10  group-hover:text-white">
                 <a class="bg-slate-200 p-3 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-black" viewBox="0 0 24 24"><path d="M16.24,11.51l1.57-1.57l-3.75-3.75l-1.57,1.57L8.35,3.63c-0.78-0.78-2.05-0.78-2.83,0l-1.9,1.9 c-0.78,0.78-0.78,2.05,0,2.83l4.13,4.13L3,17.25V21h3.75l4.76-4.76l4.13,4.13c0.95,0.95,2.23,0.6,2.83,0l-1.9-1.9 c0.78-0.78,0.78-2.05,0-2.83L16.24,11.51z M9.18,11.07L5.04,6.94l1.89-1.9c0,0,0,0,0,0l1.27,1.27L7.02,7.5l1.41,1.41l1.19-1.19 l1.45,1.45L9.18,11.07z M17.06,18.96l-4.13-4.13l1.9-1.9l1.45,1.45l-1.19,1.19l1.41,1.41l1.19-1.19l1.27,1.27L17.06,18.96z"/><path d="M20.71,7.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34c-0.47-0.47-1.12-0.29-1.41,0l-1.83,1.83l3.75,3.75L20.71,7.04z"/></svg>  </a>
                     <h3 class="text-xl font-semibold">Web design</h3>
                 <p class="text-justify">Web design is about creating the visual layout and user interface of websites. It involves graphic design, typography, color schemes, and the overall aesthetics of a website, enhancing the user experience.</p>
