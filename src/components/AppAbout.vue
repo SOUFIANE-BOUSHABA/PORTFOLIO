@@ -115,7 +115,7 @@
             <div class="w-full md:w-1/4 border-2 py-20 px-4 group relative cursor-pointer ">
                 <div :class="{' group-hover:text-black': isDarkMode}" class="text-center grid gap-8 place-items-center z-10  group-hover:text-white">
                 <a class="bg-slate-200 p-3 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-black" viewBox="0 0 24 24"><path d="M16.24,11.51l1.57-1.57l-3.75-3.75l-1.57,1.57L8.35,3.63c-0.78-0.78-2.05-0.78-2.83,0l-1.9,1.9 c-0.78,0.78-0.78,2.05,0,2.83l4.13,4.13L3,17.25V21h3.75l4.76-4.76l4.13,4.13c0.95,0.95,2.23,0.6,2.83,0l-1.9-1.9 c0.78-0.78,0.78-2.05,0-2.83L16.24,11.51z M9.18,11.07L5.04,6.94l1.89-1.9c0,0,0,0,0,0l1.27,1.27L7.02,7.5l1.41,1.41l1.19-1.19 l1.45,1.45L9.18,11.07z M17.06,18.96l-4.13-4.13l1.9-1.9l1.45,1.45l-1.19,1.19l1.41,1.41l1.19-1.19l1.27,1.27L17.06,18.96z"/><path d="M20.71,7.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34c-0.47-0.47-1.12-0.29-1.41,0l-1.83,1.83l3.75,3.75L20.71,7.04z"/></svg>  </a>
-                    <h3 class="text-xl font-semibold">Web design</h3>
+                    <h3 class="text-xl font-semibold">Web design </h3>
                 <p class="text-justify">Web design is about creating the visual layout and user interface of websites. It involves graphic design, typography, color schemes, and the overall aesthetics of a website, enhancing the user experience.</p>
                 </div>
                 <div :class="{'bg-slate-950': isDarkMode}" class="bg-slate-400 h-4 w-full absolute rounded-t-full bottom-0 left-0 group-hover:h-full  transition-height duration-300  opacity-50 group-hover:rounded-none duration-500"></div>
